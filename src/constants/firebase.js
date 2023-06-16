@@ -1,16 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { API_KEY_FIREBASE } from "./.env.local";
-
 
 const firebaseConfig = {
-  apiKey: API_KEY_FIREBASE,
-  authDomain: "taipei-parking-v2-ceb64.firebaseapp.com",
-  projectId: "taipei-parking-v2-ceb64",
-  storageBucket: "taipei-parking-v2-ceb64.appspot.com",
-  messagingSenderId: "969760120576",
-  appId: "1:969760120576:web:5e3722bdf651a8db769de5",
-  measurementId: "G-MPGQ4SNY4W",
+  apiKey: import.meta.env.VITE_API_KEY_FIREBASE,
+  authDomain: "taipei-parking-v2-389902.firebaseapp.com",
+  projectId: "taipei-parking-v2-389902",
+  storageBucket: "taipei-parking-v2-389902.appspot.com",
+  messagingSenderId: "929229085215",
+  appId: "1:929229085215:web:407f206255bc40ae4bd32a",
+  measurementId: "G-61PC8D8VEE"
 };
 
 const app = initializeApp(firebaseConfig);

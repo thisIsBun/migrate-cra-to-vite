@@ -1,13 +1,12 @@
 import { useLoadScript } from "@react-google-maps/api";
 import Map from "../../components/Map";
 import Loader from "../../components/Loader";
-import { API_KEY_MAP } from "../../constants/.env.local";
 
 const libraries = ["places"]
 
 export default function HomePage() {
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: API_KEY_MAP,
+    googleMapsApiKey: import.meta.env.VITE_API_KEY_MAP,
     libraries: libraries,
   });
   return !isLoaded ? (
