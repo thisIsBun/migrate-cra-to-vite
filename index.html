@@ -20,6 +20,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="favicon.ico" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1d2a35"/>
     <meta name="description" content="開車進台北市嗎？想知道哪裡有空位、怎麼收費嗎？「車位即時查」can help!">
@@ -34,13 +35,11 @@
         height: 100%;
       }
     </style>
-    <script type="module" crossorigin src="/assets/index-80f76440.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/google-2d74f8de.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-43d16258.js">
-    <link rel="modulepreload" crossorigin href="/assets/utilities-1afecba5.js">
+    <script type="module" crossorigin src="/assets/index-d55ff0ad.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-e741e572.js">
+    <link rel="modulepreload" crossorigin href="/assets/utilities-0378fe99.js">
     <link rel="modulepreload" crossorigin href="/assets/fortawesome-4f418b12.js">
-    <link rel="stylesheet" href="/assets/google-874c6c45.css">
-    <link rel="stylesheet" href="/assets/index-00435e9c.css">
+    <link rel="stylesheet" href="/assets/index-0fecf5da.css">
   </head>
 
   <body>
@@ -50,7 +49,7 @@
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register('/public/serviceWorker.js')
+            .register('/serviceWorker.js')
             .then((reg) => {
               console.log("ServiceWorker Registered");
             })
