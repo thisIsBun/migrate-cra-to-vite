@@ -1,4 +1,4 @@
-import{r as g,T as v,j as e,L as f,s as t,P as n,l as z,A,u as L,M as P,d as E,m as I,f as p,n as S,h as U,i as W,b as B}from"./index-edea1a29.js";const m=t.button`
+import{r as g,T as v,j as e,d as f,s as t,P as n,q as z,A,u as L,M as P,b as E,t as I,l as p,v as S,m as U,n as W,L as B}from"./index-af050667.js";const m=t.button`
   width: 100%;
   font-size: 16px;
   padding: 0.7em;
@@ -32,17 +32,17 @@ import{r as g,T as v,j as e,L as f,s as t,P as n,l as z,A,u as L,M as P,d as E,m
     border-radius: 12px;
     border: 1px solid ${o=>o.$color.border_main};
   }
-`,D=t.div`
+`,q=t.div`
   flex-basis: 35%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`,H=t.form`
+`,D=t.form`
   flex-grow: 1;
-`,Q=t.h1`
+`,H=t.h1`
   font-size: 24px;
   margin-bottom: 12px;
-`,Y=t.span`
+`,Q=t.span`
   margin: 16px 0;
   text-align: center;
   position: relative;
@@ -88,10 +88,10 @@ import{r as g,T as v,j as e,L as f,s as t,P as n,l as z,A,u as L,M as P,d as E,m
   &:hover {
     color: ${o=>o.$color.button_hover};
   }
-`,q=t.div`
+`,Y=t.div`
   border-radius: 5px;
   font-size: 12px;
   padding: 12px;
   background: ${o=>o.$color.background_error};
   color: ${o=>o.$color.font_secondary_blk};
-`;function J({title:o,btnName:r,account:a,password:i,handleLogin:y,handleSignup:_,errorMessage:h,isLoading:k,setErrorMessage:l,setAccount:w,setPassword:C}){const{theme:c}=g.useContext(v),d=z(),{setUser:F}=g.useContext(A),G=L(),T=async()=>{E("event","login_google",{method:"Google"});try{await I(p,S),U.fire({title:"登入成功"}),W(p.currentUser.uid),F(p.currentUser.uid),G("/")}catch(s){l(s.message)}};return e.jsxs(R,{$color:c,children:[e.jsxs(D,{children:[e.jsx(Q,{children:o}),e.jsx(u,{btnName:"使用 Google帳號登入",handleGoogleLogin:T}),e.jsx(Y,{$color:c,children:"或"})]}),e.jsxs(H,{onSubmit:s=>{d.pathname==="/login"?y(s):_(s)},children:[e.jsxs(x,{children:[e.jsxs("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center"},children:[e.jsx(b,{children:"Email"}),d.pathname==="/login"&&e.jsx(j,{to:"/signup",$color:c,children:"註冊新帳號？"}),d.pathname==="/signup"&&e.jsx(j,{to:"/login",$color:c,children:"登入帳號？"})]}),e.jsx($,{type:"email",$color:c,value:a,onChange:s=>{w(s.target.value)},onFocus:()=>{l("")}})]}),e.jsxs(x,{children:[e.jsx(b,{children:"Password"}),e.jsx($,{type:"password",$color:c,value:i,onChange:s=>{C(s.target.value)},onFocus:()=>{l("")}})]}),e.jsxs(x,{children:[e.jsx(u,{isLoading:k,btnName:r}),h&&e.jsx(q,{$color:c,children:h})]})]})]})}J.propTypes={title:n.string,btnName:n.string,account:n.string,password:n.string,handleLogin:n.func,handleSignup:n.func,errorMessage:n.string,isLoading:n.bool,setErrorMessage:n.func,setAccount:n.func,setPassword:n.func,handleGoogleLogin:n.func};export{J as F};
+`;function J({title:o,btnName:r,account:a,password:i,handleLogin:y,handleSignup:_,errorMessage:h,isLoading:k,setErrorMessage:l,setAccount:w,setPassword:C}){const{theme:c}=g.useContext(v),d=z(),{setUser:F}=g.useContext(A),G=L(),T=async()=>{E("event","login_google",{method:"Google"});try{await I(p,S),U.fire({title:"登入成功"}),W(p.currentUser.uid),F(p.currentUser.uid),G("/")}catch(s){l(s.message)}};return e.jsxs(R,{$color:c,children:[e.jsxs(q,{children:[e.jsx(H,{children:o}),e.jsx(u,{btnName:"使用 Google帳號登入",handleGoogleLogin:T}),e.jsx(Q,{$color:c,children:"或"})]}),e.jsxs(D,{onSubmit:s=>{d.pathname==="/login"?y(s):_(s)},children:[e.jsxs(x,{children:[e.jsxs("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center"},children:[e.jsx(b,{children:"Email"}),d.pathname==="/login"&&e.jsx(j,{to:"/signup",$color:c,children:"註冊新帳號？"}),d.pathname==="/signup"&&e.jsx(j,{to:"/login",$color:c,children:"登入帳號？"})]}),e.jsx($,{type:"email",$color:c,value:a,onChange:s=>{w(s.target.value)},onFocus:()=>{l("")}})]}),e.jsxs(x,{children:[e.jsx(b,{children:"Password"}),e.jsx($,{type:"password",$color:c,value:i,onChange:s=>{C(s.target.value)},onFocus:()=>{l("")}})]}),e.jsxs(x,{children:[e.jsx(u,{isLoading:k,btnName:r}),h&&e.jsx(Y,{$color:c,children:h})]})]})]})}J.propTypes={title:n.string,btnName:n.string,account:n.string,password:n.string,handleLogin:n.func,handleSignup:n.func,errorMessage:n.string,isLoading:n.bool,setErrorMessage:n.func,setAccount:n.func,setPassword:n.func,handleGoogleLogin:n.func};export{J as F};
