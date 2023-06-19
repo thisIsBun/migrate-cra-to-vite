@@ -18,5 +18,5 @@ export default defineConfig({
             },
         },
     },
-    base: '/migrate-cra-to-vite/'
+    base: '/migrate-cra-to-vite/',
 })

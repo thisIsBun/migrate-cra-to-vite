@@ -1,8 +1,4 @@
 import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./pages/HomePage/HomePage";
-import SavePage from "./pages/SavePage";
-import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
 import Footer from "./components/Footer";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import styled from "styled-components";
@@ -16,9 +12,14 @@ import { AuthContext } from "./contexts/AuthContext";
 import { auth } from "./constants/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { getAuthToken } from "./constants/utils";
-
+import React, { lazy, Suspense } from "react"
 
 library.add(fas, far);
+
+const HomePage = lazy(() => import("./pages/HomePage"))
+const SavePage = lazy(() => import("./pages/SavePage"))
+const LoginPage = lazy(() => import("./pages/LoginPage"))
+const SignupPage = lazy(() => import("./pages/SignupPage"))
 
 const Container = styled.div`
   margin: 0 auto;
@@ -55,19 +56,21 @@ function App() {
         <HashRouter>
           <Navbar isLoading={isLoading} />
           <Container $color={theme}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route
-                path="/save"
-                element={
-                  <ProtectedRoute user={user}>
-                    <SavePage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/signup" element={<SignupPage />} />
-            </Routes>
+            <Suspense fallback={<h1>loading...</h1>}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                  path="/save"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <SavePage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+              </Routes>
+            </Suspense>
           </Container>
           <Footer />
         </HashRouter>
