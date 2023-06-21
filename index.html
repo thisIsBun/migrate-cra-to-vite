@@ -34,15 +34,27 @@
       height: 100%;
     }
   </style>
-  <script type="module" crossorigin src="/migrate-cra-to-vite/assets/index-93e077a3.js"></script>
+  <script type="module" crossorigin src="/migrate-cra-to-vite/assets/index-af050667.js"></script>
   <link rel="stylesheet" href="/migrate-cra-to-vite/assets/index-00435e9c.css">
 </head>
 
 <body>
   <div id="root"></div>
   
-  <!-- <script> -->
-  
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/serviceWorker.js")
+          .then((reg) => {
+            console.log("ServiceWorker Registered");
+          })
+          .catch((err) => {
+            console.log("Error in ServiceWorker", err);
+          });
+      });
+    }
+  </script>
 </body>
 
 </html>
