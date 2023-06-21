@@ -45,7 +45,7 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
-          .register("/migrate-cra-to-vite/serviceWorker.js")
+          .register("__PUBLIC_URL__/serviceWorker.js")
           .then((reg) => {
             console.log("ServiceWorker Registered");
           })
