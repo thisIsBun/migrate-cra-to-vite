@@ -1,6 +1,0 @@
-import{r as t,j as i}from"./react-a6e30971.js";import{F as l}from"./Form-d8d14019.js";import{s as h}from"./styled-components-426a60f6.js";import{A as x,M as S,g as A,b as s,d as E,s as w}from"./index-e2fcd8e6.js";import{c as U}from"./@firebase-40e41277.js";import{a as j}from"./react-router-e66c8262.js";import"./object-assign-b33fa8b7.js";import"./hoist-non-react-statics-459140a6.js";import"./prop-types-45996e4d.js";import"./react-router-dom-664f3995.js";import"./@remix-run-1b4dfeea.js";import"./react-is-8d9ddb1f.js";import"./@emotion-3c1bd611.js";import"./react-dom-cda6ce73.js";import"./scheduler-a001dc3c.js";import"./sweetalert2-2c3eca16.js";import"./@fortawesome-30886df6.js";import"./firebase-e58c9326.js";import"./idb-f62f60ab.js";import"./tslib-4b8363ab.js";const v=h.div`
-  ${S} {
-    width: 478px;
-    margin: 0 auto;
-  }
-`;function B(){const[r,n]=t.useState(""),[e,m]=t.useState(""),[p,o]=t.useState(""),[u,a]=t.useState(!1),{setUser:c}=t.useContext(x),g=j(),d=async M=>{a(!0),A("event","sign_up",{method:"Google"});try{await U(s,r,e),E.fire({title:"註冊成功"}),w(s.currentUser.uid),c(s.currentUser.uid),g("/")}catch(f){o(f.message),a(!1)}};return i.jsx(v,{children:i.jsx(l,{title:"Sign up",btnName:"註冊",account:r,password:e,setAccount:n,setPassword:m,handleSignup:d,errorMessage:p,setErrorMessage:o,isLoading:u})})}export{B as default};

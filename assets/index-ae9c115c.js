@@ -1,6 +1,0 @@
-import{r as t,j as i}from"./react-a6e30971.js";import{A as f,M as h,g as x,b as s,d as A,s as E}from"./index-e2fcd8e6.js";import{F as w}from"./Form-d8d14019.js";import{s as L}from"./styled-components-426a60f6.js";import{s as j}from"./@firebase-40e41277.js";import{a as v}from"./react-router-e66c8262.js";import"./object-assign-b33fa8b7.js";import"./hoist-non-react-statics-459140a6.js";import"./react-dom-cda6ce73.js";import"./scheduler-a001dc3c.js";import"./react-router-dom-664f3995.js";import"./@remix-run-1b4dfeea.js";import"./prop-types-45996e4d.js";import"./sweetalert2-2c3eca16.js";import"./@fortawesome-30886df6.js";import"./firebase-e58c9326.js";import"./react-is-8d9ddb1f.js";import"./@emotion-3c1bd611.js";import"./idb-f62f60ab.js";import"./tslib-4b8363ab.js";const M=L.div`
-  ${h} {
-    width: 478px;
-    margin: 0 auto;
-  }
-`;function z(){const[o,n]=t.useState(""),[r,m]=t.useState(""),[p,e]=t.useState(""),[u,a]=t.useState(!1),{setUser:c}=t.useContext(f),g=v(),d=async()=>{a(!0),x("event","login_email",{method:"Google"});try{await j(s,o,r),A.fire({title:"登入成功"}),E(s.currentUser.uid),c(s.currentUser.uid),g("/")}catch(l){e(l.message),a(!1)}};return i.jsx(M,{children:i.jsx(w,{title:"Log in",btnName:"登入",account:o,password:r,setAccount:n,setPassword:m,handleLogin:d,errorMessage:p,setErrorMessage:e,isLoading:u})})}export{z as default};
