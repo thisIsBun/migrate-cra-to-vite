@@ -4,7 +4,7 @@ import replace from '@rollup/plugin-replace';
 
 export default defineConfig({
     server: {
-        open: '/index.html'
+        open: true
     },
     plugins: [replace({
         __PUBLIC_URL__: '/migrate-cra-to-vite',
